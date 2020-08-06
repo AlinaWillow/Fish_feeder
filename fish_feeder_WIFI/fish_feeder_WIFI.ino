@@ -13,7 +13,7 @@ char auth[] = "gw8rE1Sq0DUQO7tEiJIHrzPUg8Dqx35J";
 // Set password to "" for open networks.
 char ssid[] = "PTNP";
 char pass[] = "Wiboonbajaree1969";
-Servo servo;
+Servo servo; //D6
 int sw = D1;
 
 BLYNK_WRITE(V3)
@@ -22,9 +22,9 @@ BLYNK_WRITE(V3)
     for(int i=0;i<=1;i+=1)
     {
         servo.write(45);
-        delay(1000);
+        delay(500);
         servo.write(0); 
-        delay(1000);    
+        delay(500);    
     }
   }
   else{servo.write(0);}
