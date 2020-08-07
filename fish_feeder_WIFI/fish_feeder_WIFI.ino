@@ -18,14 +18,14 @@ int sw = D1;
 BLYNK_WRITE(V3)
 {
   if (param.asInt()==0){
- 
+    for(int i=0;i<=1;i++){
         servo.write(0);
         Serial.print("0 tele "); 
         delay(500); 
-        servo.write(18);  
+        servo.write(15);  
         delay(500); 
-        Serial.println("18 tele");
- 
+        Serial.println("15 tele");
+    }
   }
 
 }
@@ -50,8 +50,8 @@ void loop()
 {
   Blynk.run();
   if(digitalRead(sw)== 0){
-    servo.write(18);
-    Serial.println("18 Botton");
+    servo.write(15);
+    Serial.println("15 Botton");
   }
   if (digitalRead(sw)== 1){
     servo.write(0);
